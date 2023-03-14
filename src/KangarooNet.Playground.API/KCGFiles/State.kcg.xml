@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeGenerator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:noNamespaceSchemaLocation="../../KangarooNet.CodeGenerators/Structure/CodeGeneratorSchema.xsd">
+	<Entity Name="State" PluralName="States">
+		<EntityFields>
+			<KeyField KeyType="Guid" Name="CountryId"/>
+			<StringField Name="Name" IsRequired="true"/>
+			<StringField Name="IBGECode"/>
+		</EntityFields>
+		
+		<GenerateDatabaseEntity>
+			<GenerateDatabaseEntityConfiguration />
+		</GenerateDatabaseEntity>
+
+		<GenerateAutoMapper AutoMapperSourceType="Entity" />
+		<GenerateAutoMapper AutoMapperSourceType="DatabaseEntity" />
+
+		<GenerateEntityHandlerRequest>
+			<GenerateController>
+				<Permissions>
+					<Permission Guid="fa31fdf0-62e7-494a-a287-2a0d31da7728" 
+								Name="General_Country_Handler"/>
+				</Permissions>
+			</GenerateController>
+			<GenerateEntityHandler />
+		</GenerateEntityHandlerRequest>
+		
+		<GenerateEntityQueryRequest>
+			<GenerateController>
+				<Permissions>
+					<Permission Guid="329ad8b9-8a3d-4f97-b4c4-6d64d21fc305" 
+								Name="General_Country_Get"/>
+				</Permissions>
+			</GenerateController>
+		</GenerateEntityQueryRequest>
+		
+		<GenerateEntitiesQueryRequest>
+			<GenerateController>
+				<Permissions>
+					<Permission Guid="924faed8-4eaf-4aae-b03d-bb242674cd6d" 
+								Name="General_Countries_Get"/>
+				</Permissions>
+			</GenerateController>
+		</GenerateEntitiesQueryRequest>
+	</Entity>
+</CodeGenerator>

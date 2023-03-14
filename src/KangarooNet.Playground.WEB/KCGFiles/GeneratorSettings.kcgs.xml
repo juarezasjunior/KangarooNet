@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeGeneratorSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					   xsi:noNamespaceSchemaLocation="../../KangarooNet.CodeGenerators/Structure/CodeGeneratorSettingsSchema.xsd">
+	
+	<FrontendEntititesSettings 
+		EntitiesNamespace="KangarooNet.Playground.WEB.Entities"
+		ValidatorsNamespace="KangarooNet.Playground.WEB.Entities.Validators"
+		GenerateAuthEntities="true"/>
+
+	<APIClientSettings
+		APIClientNamespace="KangarooNet.Playground.WEB.APIClient"
+		EntitiesNamespace="KangarooNet.Playground.WEB.Entities"
+		GenerateAuthAPIClient="true"/>
+	
+</CodeGeneratorSettings>

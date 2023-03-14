@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KangarooNet.Domain.Exceptions</name>
+    </assembly>
+    <members>
+        <member name="M:KangarooNet.Domain.Exceptions.KangarooNetException.#ctor(KangarooNet.Domain.Exceptions.KangarooNetErrorCode,System.Nullable{System.Int32},System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KangarooNet.Domain.Exceptions.KangarooNetException"/> class.
+            </summary>
+            <param name="internalErrorCode">Error code used by KangarooNet to register some specific internal exceptions.</param>
+            <param name="errorCode">Your error code that you want to register to classify your exceptions.</param>
+            <param name="additionalInfo">Add any other information that you want to.</param>
+        </member>
+        <member name="M:KangarooNet.Domain.Exceptions.KangarooNetSecurityException.#ctor(KangarooNet.Domain.Exceptions.KangarooNetErrorCode,System.String)">
+            <summary>
+            Initializes a new instance of the <see cref="T:KangarooNet.Domain.Exceptions.KangarooNetSecurityException"/> class.
+            </summary>
+            <param name="internalErrorCode">Error code used by KangarooNet to register some specific internal exceptions.</param>
+            <param name="additionalInfo">Add any other information that you want to.</param>
+        </member>
+    </members>
+</doc>

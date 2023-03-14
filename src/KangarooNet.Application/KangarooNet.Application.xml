@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KangarooNet.Application</name>
+    </assembly>
+    <members>
+        <member name="M:KangarooNet.Application.Services.ICurrentUserService.GetCurrentUserNameToAudit">
+            <summary>
+            Get the current user name to be included in the audit field.
+            </summary>
+            <returns>The user name.</returns>
+        </member>
+        <member name="M:KangarooNet.Application.Services.ICurrentUserService.SetCurrentUser(System.Security.Claims.ClaimsPrincipal)">
+            <summary>
+            Set the current user based on claims principal.
+            </summary>
+            <param name="principal">The logged in information.</param>
+        </member>
+    </members>
+</doc>

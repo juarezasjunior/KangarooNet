@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="GeneratorSettings.kcgs.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <AdditionalFiles Include="..\MyFirstSample\Country.kcg.xml" Link="Country.kcg.xml" />
+    <AdditionalFiles Include="GeneratorSettings.kcgs.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="KangarooNet.CodeGenerators" Version="23.1.1.1" />
+    <PackageReference Include="KangarooNet.UI.APIClient.Auth" Version="23.1.1.1" />
+  </ItemGroup>
+
+</Project>

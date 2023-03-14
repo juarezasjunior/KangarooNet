@@ -1,0 +1,57 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<IsPackable>false</IsPackable>
+		<LangVersion>latest</LangVersion>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<!--
+		  Make sure any documentation comments which are included in code get checked for syntax during the build, but do
+		  not report warnings for missing comments.
+    
+		  CS1573: Parameter 'parameter' has no matching param tag in the XML comment for 'parameter' (but other parameters do)
+		  CS1591: Missing XML comment for publicly visible type or member 'Type_or_Member'
+		-->
+		<DocumentationFile>$(OutputPath)$(AssemblyName).xml</DocumentationFile>
+		<NoWarn>$(NoWarn),1573,1591,1712</NoWarn>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<EmitCompilerGeneratedFiles>true</EmitCompilerGeneratedFiles>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="..\Stylecop.json">
+			<Link>Stylecop.json</Link>
+		</AdditionalFiles>
+	</ItemGroup>
+
+	<ItemGroup>
+		<AdditionalFiles Include="GeneratorSettings.kcgs.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.4.0" />
+		<PackageReference Include="NUnit" Version="3.13.3" />
+		<PackageReference Include="NUnit3TestAdapter" Version="4.3.0" />
+		<PackageReference Include="coverlet.collector" Version="3.2.0">
+		  <PrivateAssets>all</PrivateAssets>
+		  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+		</PackageReference>
+		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
+			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+			<PrivateAssets>all</PrivateAssets>
+		</PackageReference>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\KangarooNet.CodeGenerators\KangarooNet.CodeGenerators.csproj" OutputItemType="Analyzer" ReferenceOutputAssembly="false" />
+		<ProjectReference Include="..\KangarooNet.Infrastructure.DatabaseRepositories\KangarooNet.Infrastructure.DatabaseRepositories.csproj" />
+		<ProjectReference Include="..\KangarooNet.Domain.DatabaseEntities\KangarooNet.Domain.DatabaseEntities.csproj" />
+		<ProjectReference Include="..\KangarooNet.Domain.Entities\KangarooNet.Domain.Entities.csproj" />
+		<ProjectReference Include="..\KangarooNet.Domain\KangarooNet.Domain.csproj" />
+	</ItemGroup>
+
+</Project>

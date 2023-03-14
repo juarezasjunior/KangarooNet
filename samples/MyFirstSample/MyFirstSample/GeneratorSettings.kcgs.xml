@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeGeneratorSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					   xsi:noNamespaceSchemaLocation="../../KangarooNet.CodeGenerators/Structure/CodeGeneratorSettingsSchema.xsd">
+
+	<DatabaseRepositoriesSettings
+		EntitiesNamespace="MyFirstSample.Entities"
+		DatabaseEntitiesNamespace="MyFirstSample.Infrastructure.DatabaseEntities"
+		DatabaseEntityTypeConfigurationNamespace="MyFirstSample.Infrastructure.DatabaseRepositories.EntityTypeConfiguration"
+		DbContextNamespace="MyFirstSample.Infrastructure.DatabaseRepositories.DBContexts"
+		DatabaseRepositoriesNamespace="MyFirstSample.Infrastructure.DatabaseRepositories"
+		DatabaseEntityMapperNamespace="MyFirstSample.Infrastructure.DatabaseRepositories.Mapper"
+		IdentityDbContextCustomUserClass="ApplicationUser"/>
+
+	<BackendEntititesSettings
+		EntitiesNamespace="MyFirstSample.Entities"
+		ValidatorsNamespace="MyFirstSample.Entities.Validators"
+		GenerateAuthEntities="true"/>
+
+	<ApplicationSettings
+		ApplicationNamespace="MyFirstSample.Application"
+		DbContextNamespace="MyFirstSample.Infrastructure.DatabaseRepositories.DBContexts"
+		DatabaseRepositoriesNamespace="MyFirstSample.Infrastructure.DatabaseRepositories"
+		DatabaseEntitiesNamespace="MyFirstSample.Infrastructure.DatabaseEntities"
+		EntitiesNamespace="MyFirstSample.Entities"
+		GenerateAuthHandlersBasedOnCustomUserClass="ApplicationUser"/>
+
+	<APISettings
+		ControllersNamespace="MyFirstSample.API.Controllers"
+		ApplicationNamespace="MyFirstSample.Application"
+		EntitiesNamespace="MyFirstSample.Entities"
+		GenerateAuthController="true"/>
+
+</CodeGeneratorSettings>

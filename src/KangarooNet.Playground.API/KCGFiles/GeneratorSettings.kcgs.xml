@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeGeneratorSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+					   xsi:noNamespaceSchemaLocation="../../KangarooNet.CodeGenerators/Structure/CodeGeneratorSettingsSchema.xsd">
+	
+	<DatabaseRepositoriesSettings
+		EntitiesNamespace="KangarooNet.Playground.Entities"
+		DatabaseEntitiesNamespace="KangarooNet.Playground.Infrastructure.DatabaseEntities"
+		DatabaseEntityTypeConfigurationNamespace="KangarooNet.Playground.Infrastructure.DatabaseRepositories.EntityTypeConfiguration"
+		DbContextNamespace="KangarooNet.Playground.Infrastructure.DatabaseRepositories.DBContexts"
+		DatabaseRepositoriesNamespace="KangarooNet.Playground.Infrastructure.DatabaseRepositories"
+		DatabaseEntityMapperNamespace="KangarooNet.Playground.Infrastructure.DatabaseRepositories.Mapper"
+		IdentityDbContextCustomUserClass="ApplicationUser" />
+	
+	<BackendEntititesSettings 
+		EntitiesNamespace="KangarooNet.Playground.Entities"
+		ValidatorsNamespace="KangarooNet.Playground.Entities.Validators"
+		GenerateAuthEntities="true"/>
+
+	<ApplicationSettings
+		ApplicationNamespace="KangarooNet.Playground.Application"
+		DbContextNamespace="KangarooNet.Playground.Infrastructure.DatabaseRepositories.DBContexts"
+		DatabaseRepositoriesNamespace="KangarooNet.Playground.Infrastructure.DatabaseRepositories"
+		DatabaseEntitiesNamespace="KangarooNet.Playground.Infrastructure.DatabaseEntities"
+		EntitiesNamespace="KangarooNet.Playground.Entities"
+		GenerateAuthHandlersBasedOnCustomUserClass="ApplicationUser"/>
+
+	<APISettings
+		ControllersNamespace="KangarooNet.Playground.API.Controllers"
+		ApplicationNamespace="KangarooNet.Playground.Application"
+		EntitiesNamespace="KangarooNet.Playground.Entities"
+		GenerateAuthController="true"/>
+	
+</CodeGeneratorSettings>

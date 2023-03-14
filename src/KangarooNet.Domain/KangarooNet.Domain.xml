@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>KangarooNet.Domain</name>
+    </assembly>
+    <members>
+        <member name="M:KangarooNet.Domain.IHasGuidKey.GetKey">
+            <summary>
+            Get the entity key.
+            </summary>
+            <returns>The currenty key.</returns>
+        </member>
+        <member name="M:KangarooNet.Domain.IHasGuidKey.SetKey(System.Guid)">
+            <summary>
+            Set the entity key.
+            </summary>
+            <param name="key">The key.</param>
+        </member>
+        <member name="M:KangarooNet.Domain.IHasIntegerKey.GetKey">
+            <summary>
+            Get the entity key.
+            </summary>
+            <returns>The currenty key.</returns>
+        </member>
+        <member name="M:KangarooNet.Domain.IHasIntegerKey.SetKey(System.Int32)">
+            <summary>
+            Set the entity key.
+            </summary>
+            <param name="value">The key.</param>
+        </member>
+    </members>
+</doc>
