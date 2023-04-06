@@ -20,6 +20,7 @@
 	</PropertyGroup>
 
 	<ItemGroup>
+	  <None Remove="KCGFiles\CountrySummary.kcg.xml" />
 	  <None Remove="KCGFiles\State.kcg.xml" />
 	</ItemGroup>
 
@@ -27,6 +28,7 @@
 		<AdditionalFiles Include="..\Stylecop.json">
 			<Link>Stylecop.json</Link>
 		</AdditionalFiles>
+		<AdditionalFiles Include="KCGFiles\CountrySummary.kcg.xml" />
 		<AdditionalFiles Include="KCGFiles\State.kcg.xml" />
 		<AdditionalFiles Include="KCGFiles\Country.kcg.xml" />
 		<AdditionalFiles Include="KCGFiles\GeneratorSettings.kcgs.xml" />

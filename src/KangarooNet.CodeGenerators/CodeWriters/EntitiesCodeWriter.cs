@@ -256,15 +256,32 @@ namespace KangarooNet.CodeGenerators.CodeWriters
 
             if (summary.GenerateSummariesQueryRequest != null)
             {
+                var requestInheritance = "ISummariesQueryRequest";
+
+                var requestFields = summary.GenerateSummariesQueryRequest.RequestFields;
+
+                if (summary.GenerateSummariesQueryRequest.GenerateSearchableDefaultCriteria)
+                {
+                    requestInheritance += ", IHasSearchableDefaultCriteria";
+
+                    if (requestFields == null)
+                    {
+                        requestFields = new Fields();
+                    }
+
+                    requestFields.StringField.Add(new StringField() { Name = "Search" });
+                    requestFields.IntField.Add(new IntField() { Name = "Take" });
+                }
+
                 WriteRequestResponse(
                     codeGeneratorSettings,
                     sourceProductionContext,
                     isRequest: true,
                     classPrefix: $"{summary.PluralName}Query",
-                    inheritance: "ISummariesQueryRequest",
+                    inheritance: requestInheritance,
                     additionalUsings: summary.GenerateSummariesQueryRequest.AdditionalUsings,
                     customAttributes: summary.GenerateSummariesQueryRequest.CustomAttributes,
-                    fields: summary.GenerateSummariesQueryRequest.RequestFields,
+                    fields: requestFields,
                     isBackend: isBackend);
 
                 var useObservableCollection = isBackend ? false : codeGeneratorSettings.FrontendEntititesSettings?.UseObservableCollection ?? false;

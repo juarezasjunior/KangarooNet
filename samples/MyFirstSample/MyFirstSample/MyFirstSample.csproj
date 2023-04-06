@@ -17,10 +17,10 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="KangarooNet.CodeGenerators" Version="23.1.1.1" />
-    <PackageReference Include="KangarooNet.UI.API.Auth" Version="23.1.1.1" />
+    <PackageReference Include="KangarooNet.CodeGenerators" Version="23.4.6.1" />
+    <PackageReference Include="KangarooNet.UI.API.Auth" Version="23.4.6.1" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.1" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" />
   </ItemGroup>
 
 </Project>

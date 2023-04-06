@@ -16,8 +16,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="KangarooNet.CodeGenerators" Version="23.1.1.1" />
-    <PackageReference Include="KangarooNet.UI.APIClient.Auth" Version="23.1.1.1" />
+    <PackageReference Include="KangarooNet.CodeGenerators" Version="23.4.6.1" />
+    <PackageReference Include="KangarooNet.UI.APIClient.Auth" Version="23.4.6.1" />
   </ItemGroup>
 
 </Project>

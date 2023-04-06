@@ -329,6 +329,10 @@ namespace KangarooNet.CodeGenerators.Structure
         [XmlElement]
         public GenerateController GenerateController { get; set; }
 
+        [XmlAttribute]
+        [DefaultValue(true)]
+        public bool GenerateSearchableDefaultCriteria { get; set; } = true;
+
         [XmlElement]
         public AdditionalUsings AdditionalUsings { get; set; }
 

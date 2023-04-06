@@ -31,6 +31,10 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AdditionalFiles Include="..\KangarooNet.Playground.API\KCGFiles\CountrySummary.kcg.xml" Link="KCGFiles\CountrySummary.kcg.xml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="StyleCop.Analyzers" Version="1.1.118">
 			<IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
 			<PrivateAssets>all</PrivateAssets>

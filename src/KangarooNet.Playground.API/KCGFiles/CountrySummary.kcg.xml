@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<CodeGenerator xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:noNamespaceSchemaLocation="../../KangarooNet.CodeGenerators/Structure/CodeGeneratorSchema.xsd">
+	<Summary Name="CountrySummary" PluralName="CountrySummaries" DatabaseEntityName="Country">
+		<SummaryFields>
+			<KeyField KeyType="Guid" Name="CountryId"/>
+			<StringField Name="Name" MaxLength="500" IsRequired="true"/>
+		</SummaryFields>
+
+		<GenerateAutoMapper AutoMapperSourceType="Entity" />
+		<GenerateAutoMapper AutoMapperSourceType="DatabaseEntity" />
+
+		<GenerateSummaryQueryRequest>
+			<GenerateController />
+		</GenerateSummaryQueryRequest>
+
+		<GenerateSummariesQueryRequest>
+			<GenerateController />
+		</GenerateSummariesQueryRequest>
+	</Summary>
+</CodeGenerator>

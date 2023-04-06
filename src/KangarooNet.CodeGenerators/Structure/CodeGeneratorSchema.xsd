@@ -327,6 +327,7 @@
 			<xs:element minOccurs="0" maxOccurs="1" name="AdditionalUsings" type="AdditionalUsings" />
 			<xs:element minOccurs="0" maxOccurs="1" name="CustomAttributes" type="CustomAttributes" />
 		</xs:sequence>
+		<xs:attribute default="true" name="GenerateSearchableDefaultCriteria" type="xs:boolean" />
 	</xs:complexType>
 	<xs:complexType name="EnumEntity">
 		<xs:sequence>

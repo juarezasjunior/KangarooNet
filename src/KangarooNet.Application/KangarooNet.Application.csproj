@@ -4,7 +4,7 @@
 		<TargetFramework>net7.0</TargetFramework>
 		<ImplicitUsings>enable</ImplicitUsings>
 		<LangVersion>latest</LangVersion>
-		<Version>23.01.01.1</Version>
+		<Version>23.04.06.1</Version>
 	</PropertyGroup>
 
 	<PropertyGroup>

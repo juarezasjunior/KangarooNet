@@ -14,52 +14,66 @@ namespace KangarooNet.CodeGenerators.Extensions
     {
         public static string GetFieldType(this IField field)
         {
+            var fieldType = string.Empty;
+
             if (field is KeyField keyField)
             {
                 switch (keyField.KeyType)
                 {
                     case KeyType.Int:
-                        return "int";
+                        fieldType = "int";
+                        break;
                     case KeyType.Guid:
-                        return "Guid";
+                        fieldType = "Guid";
+                        break;
                     default:
                         break;
                 }
             }
             else if (field is GuidField)
             {
-                return "Guid";
+                fieldType = "Guid";
             }
             else if (field is StringField)
             {
-                return "string";
+                fieldType = "string";
             }
             else if (field is BoolField)
             {
-                return "bool";
+                fieldType = "bool";
             }
             else if (field is DateTimeField)
             {
-                return "DateTime";
+                fieldType = "DateTime";
             }
             else if (field is DateTimeOffsetField)
             {
-                return "DateTimeOffset";
+                fieldType = "DateTimeOffset";
             }
             else if (field is DecimalField)
             {
-                return "decimal";
+                fieldType = "decimal";
             }
             else if (field is IntField)
             {
-                return "int";
+                fieldType = "int";
             }
             else if (field is ITypedField typedField)
             {
-                return typedField.Type;
+                fieldType = typedField.Type;
             }
 
-            throw new NotImplementedException();
+            if (string.IsNullOrEmpty(fieldType))
+            {
+                throw new NotImplementedException();
+            }
+
+            if (field is ICanBeRequired canBeRequired && !canBeRequired.IsRequired)
+            {
+                return fieldType += "?";
+            }
+
+            return fieldType;
         }
 
         public static void HandleFields(this Fields fields, Action<object> action)
